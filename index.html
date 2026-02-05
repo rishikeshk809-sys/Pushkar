@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Proposal Accept</title>
+</head>
+
+<body style="background:black; text-align:center; margin-top:100px; font-family:sans-serif; color:white;">
+
+  <h1>Will you accept my proposal? 💖</h1>
+
+  <button onclick="yesClick()">YES</button>
+  <button onclick="noClick()">NO</button>
+
+  <script>
+    const noQuestions = [
+      "soch lo 😅",
+      "Really? Are you sure? 🤔",
+      "Ek baar fir soch lo, please 🙏",
+      "Agar YES nahi, to main sad ho jaunga 😢",
+      "Bas ek baar YES bolo na ❤️",
+      "Itna hard decision kyun? 😅",
+      "Tumhari smile dekh kar lagta hai YES bolna chahiye 😇",
+      "Ek aur chance sochne ka! 😉",
+      "Please… just say YES 😘"
+    ];
+
+    let noIndex = 0;
+
+    function yesClick() {
+      document.body.innerHTML = `
+        <div style="text-align:center; margin-top:100px;">
+          <h1 style="color:#fff;">🎉 Congratulations 🎉</h1>
+          <h2 style="color:#fff;">You said YES ❤️</h2>
+          <p style="color:#fff;">– Pushkar</p>
+        </div>
+      `;
+    }
+
+    function noClick() {
+      if (noIndex < noQuestions.length) {
+        alert(noQuestions[noIndex]);
+        noIndex++;
+      } else {
+        alert("Last chance… ab decide karlo 😅");
+      }
+    }
+  </script>
+
+</body>
+</html>
